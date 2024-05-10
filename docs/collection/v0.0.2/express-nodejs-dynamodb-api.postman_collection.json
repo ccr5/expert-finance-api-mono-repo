@@ -1,0 +1,66 @@
+{
+	"info": {
+		"_postman_id": "9fabb9ec-1b97-400e-bdb0-4b51dacb3441",
+		"name": "express-nodejs-dynamodb-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "11148032"
+	},
+	"item": [
+		{
+			"name": "getCashInById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{host}}/api/v1/cashIn/id/:id",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"cashIn",
+						"id",
+						":id"
+					],
+					"variable": [
+						{
+							"key": "id",
+							"value": "01801504-19c5-4174-901c-8a3255d2218f"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "createCashIn",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": \"\",\n    \"description\": \"Aluguel (Débito)\",\n    \"value\": 100,\n    \"estimatedDate\": \"09/05/2024\",\n    \"date\": \"09/05/2024\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{host}}/api/v1/cashIn/",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"cashIn",
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
