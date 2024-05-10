@@ -1,0 +1,38 @@
+{
+  "name": "expertfinance",
+  "version": "1.0.0",
+  "description": "simple api",
+  "main": "src/external/server.ts",
+  "author": "CCR5",
+  "license": "GPL-3.0-only",
+  "scripts": {
+    "dev": "ts-node-dev -r tsconfig-paths/register --respawn --transpile-only --ignore-watch node_modules src/external/server.ts",
+    "test": "jest",
+    "build": "tsc --project tsconfig.json && tscpaths -p tsconfig.json -s ./src -o ./dist",
+    "prod": "node dist/external/server.js"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.12.8",
+    "@types/uuid": "^9.0.8",
+    "ts-node": "^10.9.2",
+    "ts-node-dev": "^2.0.0",
+    "tsconfig-paths": "^4.2.0",
+    "tscpaths": "^0.0.9",
+    "typescript": "^5.4.5"
+  },
+  "dependencies": {
+    "@aws-sdk/client-dynamodb": "^3.569.0",
+    "@aws-sdk/util-dynamodb": "^3.572.0",
+    "@elastic/ecs-winston-format": "^1.5.3",
+    "@types/winston": "^2.4.4",
+    "body-parser": "^1.20.2",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "multer": "^1.4.5-lts.1",
+    "reflect-metadata": "^0.2.2",
+    "tsyringe": "^4.8.0",
+    "uuid": "^9.0.1",
+    "winston": "^3.13.0"
+  }
+}
